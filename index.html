@@ -481,6 +481,93 @@
             font-weight: 500;
         }
 
+        /* Certifications Section */
+        .certification-card {
+            background: var(--bg-secondary);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 30px;
+            margin-bottom: 25px;
+            transition: all 0.3s;
+        }
+
+        .certification-card:hover {
+            border-color: var(--accent);
+        }
+
+        .certification-content {
+            display: flex;
+            gap: 20px;
+            align-items: flex-start;
+        }
+
+        .certification-logo {
+            width: 48px;
+            height: 48px;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+            background: white;
+            padding: 8px;
+        }
+
+        .certification-logo svg {
+            width: 100%;
+            height: 100%;
+            display: block;
+        }
+
+        .certification-info {
+            flex: 1;
+        }
+
+        .certification-title {
+            font-size: 1.2rem;
+            font-weight: 600;
+            margin-bottom: 8px;
+            color: var(--text-primary);
+        }
+
+        .certification-issuer {
+            font-size: 0.95rem;
+            color: var(--text-secondary);
+            margin-bottom: 8px;
+        }
+
+        .certification-date {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.85rem;
+            color: var(--text-dim);
+            margin-bottom: 15px;
+        }
+
+        .certification-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.85rem;
+            color: var(--accent);
+            text-decoration: none;
+            padding: 8px 16px;
+            border: 1px solid var(--border);
+            border-radius: 6px;
+            transition: all 0.3s;
+        }
+
+        .certification-link:hover {
+            border-color: var(--accent);
+            background: var(--accent-dim);
+        }
+
+        .certification-link svg {
+            width: 14px;
+            height: 14px;
+            fill: var(--accent);
+        }
+
         /* Education Section */
         .education-card {
             background: var(--bg-secondary);
@@ -574,6 +661,15 @@
                 grid-template-columns: 1fr;
             }
 
+            .certification-content {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            .certification-logo {
+                align-self: flex-start;
+            }
+
             .education-card {
                 flex-direction: column;
                 text-align: center;
@@ -645,7 +741,7 @@
                         &nbsp;&nbsp;<span class="terminal-key">"experience"</span>: <span class="terminal-value">8</span>,<br>
                         &nbsp;&nbsp;<span class="terminal-key">"companies"</span>: [<span class="terminal-string">"Agoda"</span>, <span class="terminal-string">"Grab"</span>, <span class="terminal-string">"Paytm"</span>],<br>
                         &nbsp;&nbsp;<span class="terminal-key">"specialization"</span>: [<br>
-                        &nbsp;&nbsp;&nbsp;&nbsp;<span class="terminal-string">"Distributed Systems"</span>,<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;<span class="terminal-string">"Scalable Distributed Systems"</span>,<br>
                         &nbsp;&nbsp;&nbsp;&nbsp;<span class="terminal-string">"FinTech"</span>,<br>
                         &nbsp;&nbsp;&nbsp;&nbsp;<span class="terminal-string">"FinID"</span><br>
                         &nbsp;&nbsp;]<br>
@@ -847,10 +943,38 @@
             </div>
         </section>
 
+        <!-- Certifications Section -->
+        <section class="section" id="certifications">
+            <div class="section-header">
+                <span class="section-number">03.</span>
+                <h2 class="section-title">Licenses & Certifications</h2>
+                <div class="section-line"></div>
+            </div>
+
+            <div class="certification-card">
+                <div class="certification-content">
+                    <div class="certification-logo">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 20" width="32" height="20">
+                            <path fill="none" stroke="#C74634" stroke-width="4" d="m10,2a8,8 0 1,0 0,16h12a8,8 0 1,0 0-16z"/>
+                        </svg>
+                    </div>
+                    <div class="certification-info">
+                        <h3 class="certification-title">Oracle Certified Professional, Java SE 6 Programmer</h3>
+                        <p class="certification-issuer">Oracle</p>
+                        <p class="certification-date">Issued Aug 2013</p>
+                        <a href="https://www.credly.com/badges/97138497-78b4-4473-8d08-4a12ccce13dc/linked_in_profile" class="certification-link" target="_blank">
+                            Show credential
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M320 0c-17.7 0-32 14.3-32 32s14.3 32 32 32h82.7L201.4 265.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L448 109.3V192c0 17.7 14.3 32 32 32s32-14.3 32-32V32c0-17.7-14.3-32-32-32H320zM80 32C35.8 32 0 67.8 0 112V432c0 44.2 35.8 80 80 80H400c44.2 0 80-35.8 80-80V320c0-17.7-14.3-32-32-32s-32 14.3-32 32V432c0 8.8-7.2 16-16 16H80c-8.8 0-16-7.2-16-16V112c0-8.8 7.2-16 16-16H192c17.7 0 32-14.3 32-32s-14.3-32-32-32H80z"/></svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <!-- Education Section -->
         <section class="section">
             <div class="section-header">
-                <span class="section-number">03.</span>
+                <span class="section-number">04.</span>
                 <h2 class="section-title">Education</h2>
                 <div class="section-line"></div>
             </div>
